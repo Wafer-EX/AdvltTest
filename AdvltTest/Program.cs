@@ -16,10 +16,10 @@
             int[] equlibratedPlayerChips = playerChips.ToArray();
             int totalSteps = 0;
             bool isFinished = false;
+            int maxChipsIndex = 0;
 
             do
             {
-                int maxChipsIndex = 0;
                 for (int i = 0; i < equlibratedPlayerChips.Length; i++)
                 {
                     if (equlibratedPlayerChips[i] > equlibratedPlayerChips[maxChipsIndex])
