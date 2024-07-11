@@ -6,8 +6,8 @@
         {
             int[] equlibratedPlayerChips = playerChips.ToArray();
             int totalSteps = 0;
-            bool isFinished = false;
             int maxChipsIndex = 0;
+            int minChipsIndex = 0;
 
             do
             {
@@ -17,34 +17,34 @@
                     {
                         maxChipsIndex = i;
                     }
+                    if (equlibratedPlayerChips[i] < equlibratedPlayerChips[minChipsIndex])
+                    {
+                        minChipsIndex = i;
+                    }
                 }
 
                 int leftMinChipsIndex = maxChipsIndex - 1;
                 if (leftMinChipsIndex < 0)
                 {
-                    leftMinChipsIndex = equlibratedPlayerChips.Length - 1;
+                    leftMinChipsIndex = minChipsIndex;
                 }
 
                 int rightMinChipsIndex = maxChipsIndex + 1;
                 if (rightMinChipsIndex > equlibratedPlayerChips.Length - 1)
                 {
-                    rightMinChipsIndex = 0;
+                    rightMinChipsIndex = minChipsIndex;
                 }
 
-                int minChipsIndex = equlibratedPlayerChips[leftMinChipsIndex] < equlibratedPlayerChips[rightMinChipsIndex]
+                int minNeighborChipsIndex = equlibratedPlayerChips[leftMinChipsIndex] < equlibratedPlayerChips[rightMinChipsIndex]
                     ? leftMinChipsIndex : rightMinChipsIndex;
 
-                if (equlibratedPlayerChips[minChipsIndex] == equlibratedPlayerChips[maxChipsIndex])
+                if (equlibratedPlayerChips[maxChipsIndex] > equlibratedPlayerChips[minNeighborChipsIndex])
                 {
-                    isFinished = true;
-                }
-                else
-                {
-                    equlibratedPlayerChips[minChipsIndex]++;
+                    equlibratedPlayerChips[minNeighborChipsIndex]++;
                     equlibratedPlayerChips[maxChipsIndex]--;
                     totalSteps++;
                 }
-            } while (!isFinished);
+            } while (equlibratedPlayerChips[maxChipsIndex] != equlibratedPlayerChips[minChipsIndex]);
 
             return totalSteps;
         }
