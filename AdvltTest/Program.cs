@@ -13,14 +13,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Player count: ");
-            int playerCount = Convert.ToInt32(Console.ReadLine());
-
-            int[] playerChips = new int[playerCount];
-            for (int i = 0; i < playerChips.Length; i++)
+            Console.WriteLine("Player chips:");
+            string inputString = Console.ReadLine() ?? throw new NullReferenceException();
+            string[] stringValues = inputString.Replace(" ", "").Split(',');
+            
+            int[] playerChips = new int[stringValues.Length];
+            for (int i = 0; i < stringValues.Length; i++)
             {
-                Console.WriteLine($"Chip count for player {i + 1}: ");
-                playerChips[i] = Convert.ToInt32(Console.ReadLine());
+                playerChips[i] = Convert.ToInt32(stringValues[i]);
             }
 
             Console.WriteLine($"Total steps: {AdvltUtils.CalcStepsToEquilibrium(playerChips)}");
