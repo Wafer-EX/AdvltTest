@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvltTest", "AdvltTest\AdvltTest.csproj", "{F320BFEB-B93F-423B-953C-32A2BD523740}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvltTest", "AdvltTest\AdvltTest.csproj", "{F320BFEB-B93F-423B-953C-32A2BD523740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvltTests", "AdvltTests\AdvltTests.csproj", "{05CD5A35-B24F-4EF7-BA17-88CDF86E6DFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F320BFEB-B93F-423B-953C-32A2BD523740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F320BFEB-B93F-423B-953C-32A2BD523740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F320BFEB-B93F-423B-953C-32A2BD523740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CD5A35-B24F-4EF7-BA17-88CDF86E6DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CD5A35-B24F-4EF7-BA17-88CDF86E6DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CD5A35-B24F-4EF7-BA17-88CDF86E6DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CD5A35-B24F-4EF7-BA17-88CDF86E6DFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
